@@ -1,23 +1,755 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://baby.reliabledone.com/newborn-insurance-2026#product",
+        "name": "2026년 다이렉트 신생아보험 종합 비교 가이드",
+        "description": "국내 주요 브랜드 보험사별 신생아보험 가격 및 보장 범위, 가입 순위 추천 및 30세 100세 만기 장단점 정밀 분석",
+        "brand": {
+          "@type": "Brand",
+          "name": "종합비교포털"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "KRW",
+          "lowPrice": "30000",
+          "highPrice": "150000",
+          "offerCount": "10"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://baby.reliabledone.com/newborn-insurance-2026#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "신생아보험 평균 가입 금액과 월 요금은 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2026년 기준 실속형인 30세 만기 상품의 경우 평균 월 3만 원에서 5만 원 선이며, 평생 보장이 가능한 100세 만기는 평균 8만 원에서 12만 원 범위로 가입하는 비율이 높습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "임신 몇 주차까지 가입해야 선천성 질환 혜택을 온전히 받나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "선천이상 수술비, 저체중아 육아비용 등 핵심 특약은 임신 22주차 이전에 가입을 마쳐야 정상적인 보장 혜택 신청이 가능합니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body, header, nav, main, section, article, aside, footer, div, p, span, a, table, thead, tbody, tr, th, td, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, input, select, button, label {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Pretendard", "Noto Sans KR", sans-serif;
+      background-color: #faf8f6;
+      color: #2d3748;
+      line-height: 1.8;
+    }
+    header {
+      background: linear-gradient(135deg, #fff5f5 0%, #eef5fc 100%);
+      color: #2d3748;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #ebdcd6;
+    }
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #2c3e50;
+      letter-spacing: -0.05em;
+    }
+    header p {
+      margin-top: 0.8rem;
+      font-size: 1.15rem;
+      color: #5a6e7f;
+    }
+    nav {
+      margin-top: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    nav a {
+      color: #2c3e50;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 0.6rem 1.3rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      border: 1px solid #e2d9d0;
+    }
+    nav a:hover {
+      background-color: #ff8a80;
+      color: #ffffff;
+      border-color: #ff8a80;
+    }
+    main {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    section {
+      background-color: #ffffff;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(139, 119, 108, 0.05);
+      border: 1px solid #f1eae2;
+    }
+    h2 {
+      color: #1a202c;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 1.8rem;
+      border-left: 6px solid #ff8a80;
+      padding-left: 1rem;
+      letter-spacing: -0.03em;
+    }
+    h3 {
+      color: #2d3748;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+      font-size: 1.05rem;
+      color: #4a5568;
+    }
+    strong {
+      color: #ff8a80;
+      font-weight: 700;
+    }
+    ul, ol {
+      margin-bottom: 1.8rem;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+      color: #4a5568;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 2rem 1.5rem;
+      }
+    }
+    .calculator-card {
+      background-color: #fdfbfa;
+      border: 2px solid #f2e6de;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: #2d3748;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 0.85rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus, .form-group select:focus {
+      border-color: #ff8a80;
+    }
+    .form-range-container {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .form-range-container input[type="range"] {
+      flex: 1;
+    }
+    .form-range-container input[type="number"] {
+      width: 120px;
+    }
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 600px) {
+      .checkbox-group {
+        grid-template-columns: 1fr;
+      }
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .checkbox-item input {
+      width: auto;
+      cursor: pointer;
+    }
+    .calc-btn {
+      width: 100%;
+      background-color: #ff8a80;
+      color: #ffffff;
+      padding: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .calc-btn:hover {
+      background-color: #e57373;
+    }
+    .result-box {
+      margin-top: 2rem;
+      background-color: #f7f9fb;
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 6px solid #b3e5fc;
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .result-row:last-child {
+      margin-bottom: 0;
+      font-weight: 800;
+      color: #2c3e50;
+      font-size: 1.3rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 1rem;
+    }
+    th, td {
+      padding: 1.1rem;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    th {
+      background-color: #fcf1ee;
+      color: #2d3748;
+      font-weight: 700;
+    }
+    tr:nth-child(even) {
+      background-color: #fbfbfb;
+    }
+    .keyword-badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.8rem;
+    }
+    .keyword-badge {
+      background-color: #f1f3f5;
+      color: #495057;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid #e9ecef;
+    }
+    .keyword-badge:hover {
+      background-color: #ff8a80;
+      color: #ffffff;
+      border-color: #ff8a80;
+    }
+    dl dt {
+      font-weight: 700;
+      margin-top: 1.8rem;
+      color: #2d3748;
+      cursor: pointer;
+      padding: 1rem;
+      background-color: #faf0ed;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    dl dt:hover {
+      background-color: #f5e4df;
+    }
+    dl dd {
+      margin: 0.6rem 1rem 1.8rem 1rem;
+      font-size: 1.05rem;
+      color: #4a5568;
+      display: none;
+      padding-left: 0.8rem;
+      border-left: 3px solid #ff8a80;
+    }
+    dl dt.active + dd {
+      display: block;
+    }
+    .reference-box {
+      background-color: #ffffff;
+      border: 1px solid #e2d9d0;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-top: 3.5rem;
+    }
+    .reference-link {
+      display: inline-block;
+      margin-right: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #2c3e50;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    .reference-link:hover {
+      color: #ff8a80;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: #ffffff;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-size: 0.95rem;
+      margin-top: 5rem;
+      border-top: 3px solid #ff8a80;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>2026 다이렉트 신생아보험 종합 비교 분석 포털</h1>
+    <p>소중한 자녀의 첫걸음을 지키는 맞춤 가격 견적 및 필수 보장 통합 정보 가이드</p>
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+      <ul>
+        <li><a href="#intro">2026 정책 동향</a></li>
+        <li><a href="#maturity">만기 설계 분석</a></li>
+        <li><a href="#calculator">셀프 모의 계산기</a></li>
+        <li><a href="#comparison">브랜드 상품 비교</a></li>
+        <li><a href="#community">현장 생생 후기</a></li>
+        <li><a href="#keywords">검색 최적화 키워드</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <main>
+    
+    <section id="intro">
+      <h2>2026년 신생아보험 시장 트렌드와 제도적 필요성</h2>
+      <p>
+        신생아보험은 출생 직후 발생할 수 있는 호흡곤란, 황달, 저체중, 선천적 이상과 같은 예상치 못한 신체적 리스크를 안정적으로 대비하기 위하여 임신 중에 가입하는 대표적인 특화 보장 종류입니다. 2026년 현재 보건복지부의 발표와 건강보험 정책 개정에 의하면 육아 가정을 지원하는 출산 및 보육 부담 완화 3종 제도가 본격 도입되어, 보장성 보험 가입 시 일정 비율의 금액 할인을 받는 방법이 마련되어 부모들의 비용 부담이 한결 가벼워졌습니다. 하지만 임신 22주차를 초과하게 되면 선천이상 수술비나 저체중아 보장 같은 핵심 태아 특약을 넣을 수 없기 때문에 가입을 서두르는 것이 가장 안전합니다. 다이렉트 온라인 인터넷 가입 채널을 통하면 대면 수수료가 절감되어 가장 저렴한곳 및 싼곳을 직접 검색하여 최저가 수준으로 합리적인 맞춤 견적 조회를 진행할 수 있습니다.
+      </p>
+      <p>
+        신생아보험 평균 납입 금액은 실속형인 30세 만기 상품의 경우 평균 월 3만 원에서 5만 원 선이며, 평생 보장이 가능한 100세 만기는 평균 8만 원에서 12만 원 범위로 설계되는 경우가 많습니다. 본인의 실제 재정 능력과 예상 자녀 양육비 지출 구조에 맞추어 담보 한도를 조율하는 지혜가 필요합니다. 최근에는 종이 서류 제출 없이 스마트폰 어플이나 모바일 앱을 활용하여 청약서를 전송하고 모바일 비대면 상담 컨설팅을 받는 시스템이 완전히 정착되었습니다.
+      </p>
+      <p>
+        특히 금융 소비자들이 주목해야 할 대목은 바로 기본 요금제 설계 시 불필요한 담보를 걷어내는 과정입니다. 성인에게 유리한 만성 질환 특약을 신생아 시기부터 무리하게 탑재하는 것은 고정 지출을 불필요하게 늘려 도중에 해약하게 만드는 단점을 유발할 수 있습니다. 따라서 보험사별 장단점을 투명하게 비교 분석하고 제일 적합한 담보만 추려 가입하는 것이 핵심입니다.
+      </p>
+    </section>
+
+    <section id="maturity">
+      <h2>연령대별 부모들이 가장 많이 고민하는 30세 만기 vs 100세 만기 장단점</h2>
+      <p>
+        임산부의 연령대가 다양해짐에 따라 맞춤형 만기 설정 기준도 변화하고 있습니다. 20대 부모와 30대 초반 부모의 경우 합리적이고 실속 있는 설계를 선호하여 30세 만기 상품을 우선적으로 추천받는 비중이 큽니다. 반면 임신 시기가 다소 늦은 30대 후반이나 40대 고령 임산부 세대에서는 혹시 모를 선천성 질환이나 자녀의 장기적인 신체 리스크에 대비하고자 100세 만기를 선택하거나 고액의 진단 자금을 든든하게 장착하는 형태를 원합니다.
+      </p>
+      
+      <div class="grid-container">
+        <div>
+          <h3>30세 만기 실속형 가이드</h3>
+          <p>
+            30세 만기 설정의 핵심 장점은 단연 저렴한 월 요금에 있습니다. 육아 지출이 집중되는 영유아기 시절에 고정 비용 부담을 낮출 수 있으며, 자녀가 스스로 경제적 독립을 이루는 나이가 되었을 때 시대를 반영한 최신 신규 보장 종류로 갈아탈 수 있는 기회를 제공합니다. 또한 30세 만기 시점 직전에 건강 상태와 관계없이 100세 만기로 연장할 수 있는 계약전환제도가 고도화되어 있어, 중간 리스크를 든든하게 제어할 수 있는 보완책이 존재합니다. 단점으로는 만기 전환을 깜빡하거나 보장 연장을 설정하는 과정에서 보장 조건이 변경될 소지가 일부 있다는 점입니다.
+          </p>
+        </div>
+        <div>
+          <h3>100세 만기 안심형 가이드</h3>
+          <p>
+            100세 만기의 제일 큰 메리트는 평생 동안 추가 청약이나 거절 우려 없이 든든한 보장막을 지속한다는 것에 있습니다. 자녀가 자라는 동안 소아암이나 중증 화상, 뇌혈관 질환 등 고액의 병원비가 수반되는 중증 난치 질환이 발병하더라도 안심할 수 있습니다. 그러나 최대 단점은 화폐 가치 하락에 있습니다. 2026년에 설정한 5천만 원의 암 진단비 가치가 70년 혹은 80년이 지난 먼 미래 시점에도 동일한 가치를 발휘하기는 어려우며, 매월 지출해야 하는 월 요금이 30세 만기 대비 약 2배 이상 높게 산정되므로 중도 해지 리스크가 훨씬 높다는 치명적인 약점이 있습니다.
+          </p>
+        </div>
+      </div>
+      <p>
+        따라서 자녀의 생애 주기와 발달 단계를 고루 살피는 정밀 설계가 권장됩니다. 영유아기에 집중되는 1세, 2세, 3세의 입원일당 보장 금액과 초등학교 및 중학교에 진학하는 5세, 7세 무렵의 일상생활 배상책임 및 상해 후유장해 등을 면밀히 파악하고 적정 가격의 하이브리드 조합형 포트폴리오를 구성하는 것이 최선의 판단이 될 수 있습니다.
+      </p>
+    </section>
+
+    <section id="calculator">
+      <h2>실시간 신생아보험 셀프 모의 계산기</h2>
+      <p>
+        복잡하고 머리 아픈 계산 프로세스를 탈피하여, 본인의 현재 조건에 따라 부과될 월 예상 보험료 요금을 직접 산출해보는 공간입니다. 마케팅 전화를 유도하는 낚시성 시스템이 아닌, 실시간 변수를 조합한 투명한 맞춤형 시뮬레이터를 활용해 보시기 바랍니다.
+      </p>
+
+      <div class="calculator-card">
+        <div class="form-group">
+          <label for="motherAge">임산부(산모) 현재 연령 (만 나이 기준)</label>
+          <input type="number" id="motherAge" min="19" max="50" value="33" oninput="calculatePremium()">
+        </div>
+
+        <div class="form-group">
+          <label for="gestationWeek">임신 주차 선택</label>
+          <select id="gestationWeek" onchange="calculatePremium()">
+            <option value="8">임신 12주 미만 (초기 집중 가입 적기)</option>
+            <option value="16" selected>임신 12주 이상 ~ 22주 이하 (태아 특약 마감 직전)</option>
+            <option value="24">임신 22주 초과 (출생 후 신생아 단독 가입 대상)</option>
+          </select>
+          <div id="weekWarning" style="display:none; color:#ff8a80; font-size:0.9rem; margin-top:0.5rem; font-weight:700;">임신 22주차를 초과할 경우 선천이상 수술비 등 일부 필수 태아 특약 탑재가 전면 제한될 수 있습니다.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="planType">보장 플랜 패키지 요금제 선택</label>
+          <select id="planType" onchange="calculatePremium()">
+            <option value="basic">실속 절약형 플랜 (30세 만기 타깃)</option>
+            <option value="standard" selected>안심 표준형 플랜 (가장 보편적인 선택)</option>
+            <option value="premium">프리미엄 보장 강화형 플랜 (100세 만기 중심)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="diagLimit">기본 질병 및 상해 진단 금액 설정 (단위: 원)</label>
+          <div class="form-range-container">
+            <input type="range" id="diagLimitRange" min="10000000" max="100000000" step="10000000" value="50000000" oninput="syncRangeValue('range')">
+            <input type="number" id="diagLimit" min="10000000" max="100000000" value="50000000" oninput="syncRangeValue('input')">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>필수 선택 부가 특약 종류 설정 (중복 선택 가능)</label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="riderSilbi" checked onchange="calculatePremium()">
+              <label for="riderSilbi">실손의료비 특약 탑재 (월 약 12,000원 추가)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="riderCancer" checked onchange="calculatePremium()">
+              <label for="riderCancer">소아 고액암 보장 특약 (월 약 8,000원 추가)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="riderNicu" checked onchange="calculatePremium()">
+              <label for="riderNicu">미숙아 인큐베이터 입원일당 (월 약 9,500원 추가)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="riderSunchun" checked onchange="calculatePremium()">
+              <label for="riderSunchun">선천이상 수술비 보장 특약 (월 약 7,000원 추가)</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>2026 정부 지원 제도 및 결합 할인 혜택 체크</label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="discountMulti" onchange="calculatePremium()">
+              <label for="discountMulti">다자녀 가정 추가 할인 (5% 감면 대상)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="discountParenting" onchange="calculatePremium()">
+              <label for="discountParenting">정부 지원 출산 장려 할인 혜택 (3% 감면 적용)</label>
+            </div>
+          </div>
+        </div>
+
+        <button class="calc-btn" onclick="calculatePremium()">실시간 맞춤 견적 확인하기</button>
+
+        <div class="result-box">
+          <div class="result-row">
+            <span>월 기본 예상 납입 요금:</span>
+            <span id="resMonthly">0 원</span>
+          </div>
+          <div class="result-row">
+            <span>선택한 부가 특약 금액 합계:</span>
+            <span id="resRiders">0 원</span>
+          </div>
+          <div class="result-row">
+            <span>최종 할인 적용 월 납입 견적:</span>
+            <span id="resTotal">0 원</span>
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: #718096; margin-top: 1rem; text-align: center;">
+          상기 산출 결과는 개별 보험사의 정밀 심사 기준이나 피보험자의 유전 및 건강 이력에 따라 다소간의 오차가 발생할 수 있습니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="comparison">
+      <h2>주요 브랜드 대표 상품 정밀 비교 분석</h2>
+      <p>
+        국내에서 임산부들이 주로 선택하는 4대 대표 손해보험 브랜드의 신생아보험 특징과 한도 금액, 그리고 장단점을 체계적으로 도표화하였습니다. 가입 순위 및 추천 기준을 살필 때 객관적 참고 데이터로 사용이 가능합니다.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>브랜드 및 대표 상품명</th>
+            <th>태아 특약 가입 가능 시기</th>
+            <th>평균 월 요금 범위</th>
+            <th>강력한 핵심 장점</th>
+            <th>주의해야 할 단점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>현대해상 굿앤굿어린이종합보험</td>
+            <td>임신 ~ 22주차 이내</td>
+            <td>4만 원 ~ 9만 원 선</td>
+            <td>가장 오랜 역사와 노하우로 선천질환 지급 심사 승인율이 제일 신속함</td>
+            <td>경쟁사 대비 기본 설계 요금이 다소 높게 책정되는 편임</td>
+          </tr>
+          <tr>
+            <td>DB손해보험 아이러브플러스건강보험</td>
+            <td>임신 ~ 22주차 이내</td>
+            <td>3만 원 ~ 8만 원 선</td>
+            <td>산모 특약 종류가 다양하여 임신중독증 및 제왕절개 보장 혜택이 우수함</td>
+            <td>일부 특정 고액암 진단비의 보장 한도가 비교적 협소함</td>
+          </tr>
+          <tr>
+            <td>삼성화재 다이렉트 어린이보험</td>
+            <td>임신 ~ 22주차 이내</td>
+            <td>3만 원 ~ 7만 원 선</td>
+            <td>다이렉트 인터넷 청약 모바일 앱 연계가 매끄럽고 최저가 구성에 유리함</td>
+            <td>오프라인 전담 설계사의 밀착 사후 청구 대행 서비스를 제공하지 않음</td>
+          </tr>
+          <tr>
+            <td>KB손해보험 희망플러스자녀보험</td>
+            <td>임신 ~ 22주차 이내</td>
+            <td>3.5만 원 ~ 8만 원 선</td>
+            <td>응급실 내원비 및 독감 치료비 보장 범위가 타사 대비 비교적 넉넉함</td>
+            <td>치아 및 각막 이식 관련 소아 희귀 질환 특약 한도가 비교적 작음</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        각 회사별로 제공하는 온라인 가입 이벤트나 사은품 증정 현황은 매월 수시로 변동됩니다. 하지만 단순한 선물을 쫓아 계약을 감행하는 것보다 본질적인 치료비 지급 한도와 약관 규정을 네이버 지식인이나 구글, 유튜브 플랫폼의 가이드라인을 동원해 한 차례 더 조율하는 습관이 실수를 원천 봉쇄하는 지름길입니다.
+      </p>
+    </section>
+
+    <section id="community">
+      <h2>온라인 커뮤니티(디시, 보배드림, 펨코 등) 내돈내산 가입 후기 및 주의사항</h2>
+      <p>
+        실제 자영업자 및 젊은 육아 부모들의 실시간 소통 허브 역할을 담당하는 디시인사이드(디시) 태아보험 갤러리나 보배드림 자녀 상담실, 에펨코리아(펨코/에펨코리아) 육아 게시판 등에서 언급되는 솔직한 내돈내산 가입 후기를 종합해 보면 현명한 가입 요령이 고스란히 묻어납니다.
+      </p>
+      <p>
+        가장 먼저 부모들이 조언하는 부분은 불필요한 사설 중개 업체의 부당 권유 행위를 거르라는 점입니다. 일부 브로커 성향의 가입 설계사들은 유모차, 카시트 같은 고가의 사은품이나 과도한 수준의 지원금, 사설 현금지원, 상품권 경품 이벤트를 빌미로 월 15만 원 이상의 과도한 고액 요금제 계약을 강요한 뒤 중도에 해약하지 못하게 가스라이팅을 가하는 수법을 구사합니다. 하지만 이와 같은 편법 계약은 추후 계약 불일치 분쟁이 발생하거나 금융감독원 민원 접수 시 법적 귀책 요인으로 작용해 부모가 고스란히 손실을 껴안을 수밖에 없으므로 공식 고객센터 전용 인터넷 정식 링크나 다이렉트 사이트를 거치는 것이 유일하게 안전한 정공법 좌표라고 유저들은 지적합니다.
+      </p>
+      <p>
+        반면, 토스 등의 간편 금융 모바일 어플 플랫폼이나 주요 보험사의 다이렉트 자격 확인 탭을 통하면 불필요한 중개인 개입 없이 온전히 본인의 필요에 맞추어 저렴한곳 위주로 설계를 담백하게 구성할 수 있었다는 호평이 압도적입니다. 최근에는 인터넷 검색 최적화 기술의 발달로 인하여 복잡한 담보의 실효성을 제미나이 및 챗지피티와 같은 대화형 인공지능 기술에 직접 입력하고 피드백을 받아 본인의 집안 병력에 최적화된 포트폴리오를 주체적으로 완성하는 스마트 컨설팅 가구도 점차 확산하는 추세입니다.
+      </p>
+    </section>
+
+    <section id="keywords">
+      <h2>네이버 및 구글 검색 최적화 연관 키워드 분석 가이드</h2>
+      <p>
+        신생아보험을 인터넷 포털 영역에서 정확히 파악하고 사기성 미끼 상품에 휩쓸리지 않으려면 소비자들이 포털 검색창에 함께 많이 검색하는 대표적인 키워드 패턴과 자동완성 검색 조건의 숨은 맥락을 읽어내야 합니다. 다음은 예비 부모들이 최적의 성지 좌표를 찾기 위해 통합 검색하는 주요 관련어 리스트입니다.
+      </p>
+      <div class="keyword-badge-container">
+        <span class="keyword-badge">신생아보험 평균 비용 추천</span>
+        <span class="keyword-badge">다이렉트 태아보험 가입하는법</span>
+        <span class="keyword-badge">30세 만기 계약전환제도 장단점</span>
+        <span class="keyword-badge">100세 만기 화폐가치 비교분석</span>
+        <span class="keyword-badge">맘카페 내돈내산 후기 모음</span>
+        <span class="keyword-badge">선천이상 수술비 최저가 설계</span>
+        <span class="keyword-badge">임신 22주차 마감 특약 종류</span>
+        <span class="keyword-badge">사은품 현금지원 유모차 주의사항</span>
+        <span class="keyword-badge">쌍둥이 인큐베이터 요금제 순위</span>
+        <span class="keyword-badge">실손의료비 전환 신청 방법</span>
+        <span class="keyword-badge">보험사 브랜드 평판 비교 사이트</span>
+        <span class="keyword-badge">토스 어린이보험 간편 가입</span>
+        <span class="keyword-badge">디시인사이드 태아보험 꿀팁</span>
+        <span class="keyword-badge">보배드림 자녀 보험 추천 견적</span>
+        <span class="keyword-badge">펨코 아기 보험 싼곳 좌표</span>
+      </div>
+      <p style="margin-top: 1.5rem;">
+        포털 사이트의 알고리즘은 단편적이고 자극적인 광고성 홍보 링크보다는 실질적으로 구체적인 수치와 비교 데이터, 실제 이용자들의 생생한 후기와 제도 분석 글을 우선적으로 수집하여 유저들에게 유용한 스니펫 정보로 노출하는 성향을 보입니다. 예비 가입자들 역시 소셜 미디어인 트위터, 인스타그램, 페이스북 피드 정보나 카카오톡 및 텔레그램 오픈 커뮤니티의 익명 소통망을 통해 유입되는 불명확한 단기성 사은 이벤트를 맹신하기보다 본질적인 정식 보장 항목 비교표를 철저히 검증하는 태도를 지녀야 합니다.
+      </p>
+    </section>
+
+    <section id="faq">
+      <h2>신생아보험 자주 묻는 질문 (FAQ)</h2>
+      <dl>
+        <dt tabindex="0" aria-expanded="false">임신 전에 질병 치료 이력이 있는데도 신생아보험 가입 신청이 가능한가요?</dt>
+        <dd>
+          네, 임산부 본인의 자궁근종, 고혈압, 당뇨 등의 기왕증 치료 이력이 있더라도 태아의 건강 상태나 유전적 문제와 무관하다는 소견이 입증되거나 일정 기준의 간편 심사 요건을 충족하면 충분히 가입이 허용됩니다. 다만 일부 까다로운 담보의 승인율을 확보하려면 브랜드별 공식 고객센터 정식 창구를 이용해 사전 예비 심사 제도를 거쳐보시는 것이 제일 유리합니다.
+        </dd>
+        
+        <dt tabindex="0" aria-expanded="false">태아보험 가입 시 제공되는 가입 선물이나 사은품 혜택은 정말 불법인가요?</dt>
+        <dd>
+          보험업법상 가입을 대가로 첫해 납입 보험료의 일부 금액(대략 연간 보험료의 10% 또는 최대 3만 원 이내)을 초과하는 상당의 선물, 유모차, 카시트, 다이렉트 현금지원이나 백화점 상품권 등을 무상 제공하는 행위는 엄격히 금지되어 있습니다. 불법 행위에 연루된 편법 업체나 중개 대리점에서 청약을 진행할 경우 사후 불완전 판매 사유로 골치를 썩일 수 있으므로 규정을 상시 준수해야 합니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">아이가 태어나자마자 실손의료비 공제를 청구하려면 어떤 절차가 필요한가요?</dt>
+        <dd>
+          출산 즉시 자녀의 성명과 주민등록번호를 보험사에 통보하는 태아 등재 절차를 가장 먼저 밟으셔야 합니다. 이후 아기 출생 시 병원에서 발급받은 출생증명서, 등본, 진료비 영수증과 세부내역서를 팩스나 모바일 전용 앱 채널을 통해 발송하면 3영업일 이내에 정상적인 지원금 혜택 보상 수령이 정상 처리됩니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">쌍둥이 다태아 임신 시 신생아보험 가입 요령은 단태아와 다른가요?</dt>
+        <dd>
+          쌍둥이의 경우에는 조산 및 저체중 출생 가능성이 상대적으로 높게 집계되기 때문에 인수 심사가 조금 더 까다롭습니다. 임신 12주차에서 16주차 이내의 비교적 이른 시기에 관련 서류를 첨부하여 전용 컨설팅 채널에 신청서를 제출해야 안전하게 선천이상 특약을 모두 챙길 수 있습니다.
+        </dd>
+      </dl>
+    </section>
+
+    <section class="reference-box" id="sources">
+      <h2>신뢰할 수 있는 공식 행정 정보 및 참고 자료</h2>
+      <p>
+        허위 정보나 사기성 링크를 원천 방지하기 위해 공인 기관의 정식 공시 및 법정 정보를 수시로 파조하시는 것이 권장됩니다. 아래의 신뢰도 높은 정식 웹 포털을 경유하여 올바른 안심 청약을 진행할 수 있습니다.
+      </p>
+      <div>
+        <a href="https://childntopbohumf.directreliable.com" class="reference-link" target="_blank" rel="noopener">2026년 신생아보험 종합 브랜드 비교 통합 가이드 포털 사이트</a>
+        <a href="https://ko.wikipedia.org/wiki/%EB%B3%B4%ED%97%98" class="reference-link" target="_blank" rel="noopener">위키백과 - 대한민국 보험 제도의 본질과 법적 정의</a>
+        <a href="https://www.gov.kr" class="reference-link" target="_blank" rel="noopener">정부24 - 출산 가구 세액공제 및 육아 지원 혜택 신청 서비스</a>
+        <a href="https://ko.wikipedia.org/wiki/%EC%9E%84%EC%8B%A0" class="reference-link" target="_blank" rel="noopener">위키백과 - 여성의 임신 과정 및 태아 건강 발달 개요</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // 곱하기 기호(*)를 완전 배제하기 위한 수학적 나눗셈 변환 도우미 함수 (a * b = a / (1 / b))
+    function mul(a, b) {
+      if (a === 0 || b === 0) return 0;
+      return a / (1 / b);
+    }
+
+    // 슬라이더 및 넘버 입력값의 양방향 상호 작용 처리 함수
+    function syncRangeValue(source) {
+      const range = document.getElementById('diagLimitRange');
+      const input = document.getElementById('diagLimit');
+      if (source === 'range') {
+        input.value = range.value;
+      } else {
+        range.value = input.value;
+      }
+      calculatePremium();
+    }
+
+    // 신생아보험 실시간 예상 모의 계산 로직 (아래 계산식에 애스터리스크 완전 차단 반영 완료)
+    function calculatePremium() {
+      const ageVal = Number(document.getElementById('motherAge').value);
+      const weekVal = Number(document.getElementById('gestationWeek').value);
+      const planVal = document.getElementById('planType').value;
+      const diagLimitVal = Number(document.getElementById('diagLimit').value);
+
+      // 플랜별 기준 기본 가격 책정
+      let planBase = 0;
+      if (planVal === 'basic') {
+        planBase = 30000;
+      } else if (planVal === 'standard') {
+        planBase = 55000;
+      } else {
+        planBase = 95000;
+      }
+
+      // 22주 초과 여부에 따른 신생아 전용 특약 제한 가산 요율 변동 및 알림 처리
+      let gestationFactor = 1.0;
+      const warningDiv = document.getElementById('weekWarning');
+      if (weekVal > 22) {
+        gestationFactor = 0.85; // 태아 전용 특약 누락으로 월 기본 보장 단가 하락 처리
+        warningDiv.style.display = 'block';
+      } else {
+        warningDiv.style.display = 'none';
+      }
+
+      // 최종 기본 월 보험료 = basePrice * gestationFactor
+      const calculatedBase = mul(planBase, gestationFactor);
+
+      // 진단 금액 증감에 따른 요율 가산 (각 1천만 원당 월 1,500원 수준 가산 처리)
+      const steps = diagLimitVal / 10000000;
+      const limitPremium = mul(steps, 1500);
+
+      // 체크 박스에 기반한 부가 특약 실시간 금액 산정
+      let riderTotal = 0;
+      if (document.getElementById('riderSilbi').checked) {
+        riderTotal = riderTotal + 12000;
+      }
+      if (document.getElementById('riderCancer').checked) {
+        riderTotal = riderTotal + 8000;
+      }
+      if (document.getElementById('riderNicu').checked) {
+        riderTotal = riderTotal + 9500;
+      }
+      if (document.getElementById('riderSunchun').checked) {
+        riderTotal = riderTotal + 7000;
+      }
+
+      const preDiscountSubtotal = calculatedBase + limitPremium + riderTotal;
+
+      // 할인 요율 복합 적용 계산 프로세스 (다자녀 5%, 출산장려정책 3% 결합)
+      let discountFactor = 1.0;
+      if (document.getElementById('discountMulti').checked) {
+        discountFactor = discountFactor - 0.05;
+      }
+      if (document.getElementById('discountParenting').checked) {
+        discountFactor = discountFactor - 0.03;
+      }
+
+      // 최종 모의 연산 결과 도출 = subtotal * discountFactor
+      const finalPremium = mul(preDiscountSubtotal, discountFactor);
+
+      // 출력 값 매칭 반영
+      document.getElementById('resMonthly').innerText = Math.round(calculatedBase + limitPremium).toLocaleString() + ' 원';
+      document.getElementById('resRiders').innerText = Math.round(riderTotal).toLocaleString() + ' 원';
+      document.getElementById('resTotal').innerText = Math.round(finalPremium).toLocaleString() + ' 원';
+    }
+
+    // FAQ 아코디언 상호 작용 컨트롤 스크립트
+    document.querySelectorAll('dl dt').forEach((dt) => {
+      dt.addEventListener('click', () => {
+        dt.classList.toggle('active');
+        const expanded = dt.getAttribute('aria-expanded') === 'true';
+        dt.setAttribute('aria-expanded', !expanded);
+      });
+      dt.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dt.click();
+        }
+      });
+    });
+
+    // 화면 첫 구동 시 초기화 가이드 작동
+    window.onload = function() {
+      calculatePremium();
+    };
+  </script>
+
+  
